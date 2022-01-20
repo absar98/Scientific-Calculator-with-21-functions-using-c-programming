@@ -1,0 +1,167 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    int option, factorial, j;
+    double num1, num2, result, result2, a, b, c;
+    const double pi=3.141592;
+    factorial=1;
+
+    cout <<endl <<"\t\t\t...MUHAMMAD ABSAR UDDIN..." << endl;
+    cout <<"\t\t***SCIENTIFIC CALCULATOR WITH 21 FUNCTIONS***" <<endl;
+    cout <<"\t\t***      SUBMITTED TO SIR IQBAL AZEEM     ***" <<endl <<endl;
+    cout <<"********************************************************************************" <<endl <<endl;
+    cout <<"1. Addition   \t 2. Subtraction \t 3. Multiplication\t4.Division "<<endl <<endl;
+    cout <<"5. Power      \t 6. Square root \t 7. Cube Root     \t8.Abs Value"<<endl <<endl;
+    cout <<"9. Exponential\t 10.Logarithm   \t 11.Log base 10"<<endl <<endl;
+    cout <<"12.Deg to Rad \t 13.Rad to Deg" <<endl <<endl;
+    cout <<"14.sin        \t 15.cos         \t 16.tan     "<<endl <<endl;
+    cout <<"17.sin-1      \t 18.cos-1       \t 19.tan-1   "<<endl <<endl;
+    cout <<"20.Factorial  \t 21.Quadratic Eqn\t 0. Exit"<<endl <<endl;
+    cout <<"********************************************************************************";
+
+    while(option!=0)
+{
+    cout <<endl <<endl <<"Enter the option you want to perform>>>" <<flush;
+    cin >>option;
+
+        if (option==1)
+        {
+        cout<<endl <<"Enter the first number..."; cin>>num1;
+        cout<<"Enter the second number...";cin>>num2;
+        result=num1+num2;
+        cout <<endl <<"\t\tResult>>" "  "<<num1 <<"+" <<num2 <<" = "   <<result;
+        }
+        else if(option==2)
+        {
+        cout<<endl <<"Enter the first number..."; cin>>num1;
+        cout<<"Enter the second number...";cin>>num2;
+        result=num1-num2;
+        cout <<endl <<"\t\tResult>>" "  "<<num1 <<"-" <<num2 <<" = "   <<result;
+        }
+        else if(option==3)
+        {
+        cout<<endl <<"Enter the first number..."; cin>>num1;
+        cout<<"Enter the second number..."; cin>>num2;
+        result=num1*num2;
+        cout <<endl <<"\t\tResult>>" "  "<<num1 <<"*" <<num2 <<" = "   <<result;
+        }
+        else if(option==4)
+        {
+        cout<<endl <<"Enter the number..."; cin>>num1;
+        cout<<"Enter the dividend..."; cin>>num2;
+        result=num1/num2;
+        cout <<endl <<"\t\tResult>>" "  "<<num1 <<"/" <<num2 <<" = "   <<result;
+        }
+        else if(option==5)
+        {
+        cout<<endl <<"Enter the number..."; cin>>num1;
+        cout<<"Enter the power..."; cin>>num2;
+        result=pow(num1,num2);
+        cout <<endl <<"\t\tPower of>>" "  "<<num1 <<"^" <<num2 <<" = "   <<result;
+        }
+        else if(option==6)
+        {
+        cout<<endl <<"Enter the number for square root..."; cin>>num1;
+        result=sqrt(num1);
+        cout <<endl <<"\t\tSquare root of>>"<<num1 <<" = "   <<result;
+        }
+        else if(option==7)
+        {
+        cout<<endl <<"Enter the number for cube root..."; cin>>num1;
+        result=cbrt(num1);
+        cout <<endl <<"\t\tCube root of>>"<<num1 <<" = "   <<result;
+        }
+        else if(option==8)
+        {
+        cout<<endl <<"Enter the number for Absolute Value..."; cin>>num1;
+        result=(abs(num1));
+        cout <<endl <<"\t\tAbsolute value of>>"<<num1 <<" = "   <<result;
+        }
+        else if(option==9)
+        {
+        cout<<endl <<"Enter the number for exponential..."; cin>>num1;
+        result=exp(num1);
+        cout <<endl <<"\t\tExponential of>>"  <<num1  <<" = "   <<result;
+        }
+        else if(option==10)
+        {
+        cout<<endl <<"Enter the number for logarithm..."; cin>>num1;
+        result=log(num1);
+        cout <<endl <<"\t\tLogarithm of>>"  <<num1  <<" = "   <<result;
+        }
+        else if(option==11)
+        {
+        cout<<endl <<"Enter the number for log with base 10..."; cin>>num1;
+        result=log10(num1);
+        cout <<endl <<"\t\tlog10 of>>"  <<num1  <<" = "   <<result;
+        }
+        else if(option==12)
+        {
+        cout<<endl <<"Enter the angle in degrees..."; cin>>num1;
+        result=num1*pi/180;
+        cout <<endl <<"\t\t" <<num1  <<"degrees" <<" = "   <<result <<" radians ";
+        }
+        else if(option==13)
+        {
+        cout<<endl <<"Enter the angle in radians..."; cin>>num1;
+        result=num1*180/pi;
+        cout <<endl <<"\t\t" <<num1  <<"radians" <<" = "   <<result <<" degrees ";
+        }
+        else if(option==14)
+        {
+        cout<<endl <<"Enter the angle in radians..."; cin>>num1;
+        result=sin(num1);
+        cout <<endl <<"\t\tSin("  <<num1 <<")"  <<" = "   <<result <<" radians ";
+        }
+        else if(option==15)
+        {
+        cout<<endl <<"Enter the angle in radians..."; cin>>num1;
+        result=cos(num1);
+        cout <<endl <<"\t\tCos("  <<num1 <<")"  <<" = "   <<result <<" radians ";
+        }
+        else if(option==16)
+        {
+        cout<<endl <<"Enter the angle in radians..."; cin>>num1;
+        result=tan(num1);
+        cout <<endl <<"\t\tTan("  <<num1 <<")"  <<" = "   <<result <<" radians ";
+        }
+        else if(option==17)
+        {
+        cout<<endl <<"Enter the angle in radians..."; cin>>num1;
+        result=asin(num1);
+        cout <<endl <<"\t\tsin-1("  <<num1 <<")" <<" = "   <<result <<" radians ";
+        }
+        else if(option==18)
+        {
+        cout<<endl <<"Enter the angle in radians..."; cin>>num1;
+        result=acos(num1);
+        cout <<endl <<"\t\tcos-1("  <<num1 <<")"  <<" = "   <<result <<" radians ";
+        }
+        else if(option==19)
+        {
+        cout<<endl <<"Enter the angle in radians..."; cin>>num1;
+        result=atan(num1);
+        cout <<endl <<"\t\ttan-1("  <<num1 <<")"  <<" = "   <<result <<" radians ";
+        }
+        else if(option==20)
+        {
+        cout<<"Enter the number for factorial..."; cin>>num1;
+            for (j=1; j<=num1; j++)
+            {
+            factorial=factorial*j;
+            }
+        cout <<endl <<"\t\tFactorial of " <<num1<<" is= "<<factorial<<endl;
+        }
+        else if(option==21)
+        {
+        cout << "Enter coefficient a...";  cin>>a;     cout<<"Enter coefficient b..."; cin>>b;
+        cout << "Enter coefficient c..."; cin>>c;
+        result = (-b + sqrt(b * b - 4 * a * c)) / (2 * a);
+        result2 = (-b - sqrt(b * b - 4 * a * c)) / (2 * a);
+        cout <<endl <<"\t\t The value of x1 = " <<result;    cout <<endl <<"\t\t The value of x2 = " <<result2;
+        }
+}
+    return 0;
+}
